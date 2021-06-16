@@ -1,14 +1,14 @@
 Przyste lub nieparzyste
 #include <iostream>
-using namespace std3;
+using namespace std;
 int main()
 {
 int n;
-cin»n;
+cin>>n;
 if (n%2==0)
-cout<«"Parzysta";
+cout<<"Parzysta";
 else
-cout«"Nieparzysta";
+cout<<"Nieparzysta";
 return 0;
 }
 
@@ -18,28 +18,29 @@ using namespace std;
 int main()
 {
 int a, b, c;
-cout«"a = "; cin»a;
-cout«"b = "; cin»b;
-cout«"c = "; cin>>c;
-if (a+b>c && a+c>b && b+c>a) cout<«"TAK";
-else cout«"NIE";
+cout<<"a = "; cin>>a;
+cout<<"b = "; cin>>b;
+cout<<"c = "; cin>>c;
+if (a+b>c && a+c>b && b+c>a) cout<<"TAK";
+else cout<<"NIE";
 return 0;
 }
 
 Z dwójkowego na dziesiętny
 #include <iostream>
-#include <string
+#include <string>
 using namespace std;
 int main()
 {
 int i, d=0, potega=1;
 string b;
-cout"Podaj liczbe binarna: "; cin»b;
+cout<<"Podaj liczbe binarna: "; cin>>b;
 for (i=b.size()-1;i>=0;i--)
 {
 if (b[i]=='1') d=d+potega;
 potega=potega*2;
 }
-cout«"Liczba dziesietna: "c«d;
+cout<<"Liczba dziesietna: "<<d;
 return 0;
 }
+
