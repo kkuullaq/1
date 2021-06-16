@@ -190,3 +190,54 @@ if (A[i]<mini) mini=A[i];
 if (A[i+1]>maks) maks=A[i+1];
 }
 }
+
+Euklides
+#include <iostream>
+using namespace std;
+int NWD(int a, int b)
+{
+int pom;
+while (b!=0)
+{
+pom=b;
+b=a%b;
+a=pom;
+}
+return a;
+}
+int main()
+{
+int a, b;
+cout<<"a = "; ci>>a;
+cout<<"b = "; cin>>b;
+cout<<"NWD"("<<a<<","<<b<<") = "<<NWD(a,b);
+return 0;
+}
+
+Ciąg Fibonacciego
+#include<iostream>
+using namespace std;
+
+void fibonacci(int n)
+{    
+     long long a = 0, b = 1;
+  
+     for(int i=0;i<n;i++)
+     {
+            cout<<b<<" ";
+            b += a; 
+            a = b-a; 
+     }     
+}
+
+int main()
+{
+    int n;
+    
+    cout<<"Podaj ile chcesz wypisać wyrazów ciągu fibonacciego: ";
+    cin>>n;
+    
+    fibonacci(n);
+    
+    return 0;
+}
