@@ -44,3 +44,149 @@ cout<<"Liczba dziesietna: "<<d;
 return 0;
 }
 
+Z dziesiętnego na dwójkowy
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+int d;
+string b="";
+cout<<"Podaj liczbe dziesietna: "; cin>>d;
+while (d>0)
+{
+if (d%2==0) b='0'+b;
+else b='1'+b;
+d=d/2;
+cout«"Liczba binarna: "<<b;
+return 0;
+}
+
+Palindrom
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+string wyraz;
+int i=0, j;
+bool palindrom=true;
+cout<<"Podaj wyraz: "; cin>>wyraz;
+j=wyraz.size()-1;
+while (palindrom && i<j)
+if (wyraz[i]==wyraz[j])
+{
+i++
+j--;
+}
+else palindrom=false;
+if (palindrom) cout<<"TAK";
+else cout<<"NIE";
+return 0;
+}
+
+Czy liczba jest pierwsza
+#include <iostream>
+using namespace std;
+int main()
+{
+int n, d=2;
+bool pierwsza;
+cout<<"n = "; cin>>n;
+if (n>1) pierwsza=true;
+else pierwsza=false;
+while (pierwsza && d*d<=n)
+if (n%d==0) pierwsza=false;
+else d++;
+if (pierwsza) cout<<"TAK";
+else cout<<"NIE";
+return 0;
+}
+
+Szyfrowanie
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+string t_jawny, szyfrogram="";
+int i, klucz;
+int kod;
+cout<<"Tekst jawny: "; cin>>t_jawny;
+cout<<"Klucz: "; cin>>klucz;
+for (i=0;i<t_jawny.size();i++)
+{
+kod=t_jawny[i]+klucz;
+if (kod>'Z') kod=kod-26;
+szyfrogram=szyfrogram+char(kod);
+}
+cout<<"Szyfrogram: "<<szyfrogram;
+return 0;
+}
+
+Wydawanie reszty metodą zachłanną
+#include <iostream> 
+
+using namespace std; 
+
+int main() 
+
+{ 
+
+int N[6]={50, 20, 10, 5, 2, 1}; 
+
+int R,P, i; 
+
+cout << "Podaj reszte do wyplacenia: "; 
+
+cin >> R; 
+
+i=0; 
+
+while (R>0) 
+
+{ 
+
+if (R >= N[i]) 
+
+{ 
+
+P=R / N[i];   
+
+R=R-(N[i]*P); 
+
+cout << N[i] << " x " << P << endl; 
+
+} 
+
+i++;          
+
+} 
+
+return 0; 
+
+} 
+
+Znajdowanie min i max
+void MiniMaks(int A[], int &mini, int &maks)
+{
+if (A[0]>A[1])
+{
+mini=A[1]; maks=A[0];
+}
+else
+{
+mini=A[0]; maks=A[1];
+}
+for (int i=2;i<N-1;i+=2)
+if (A[i]>A[i+1])
+{
+if (A[i+1]<mini) mini=A[i+1];
+if (A[i]>maks) maks=A[i];
+}
+else
+{
+if (A[i]<mini) mini=A[i];
+if (A[i+1]>maks) maks=A[i+1];
+}
+}
